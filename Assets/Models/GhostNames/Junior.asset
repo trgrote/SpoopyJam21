@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Jr
   Prefix: 0
-  FirstName: 1
-  LastName: 1
-  Suffix: 0
+  FirstName: 0
+  LastName: 0
+  Suffix: 1
