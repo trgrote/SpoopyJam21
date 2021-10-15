@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Margine
   Prefix: 0
   FirstName: 1
-  LastName: 1
+  LastName: 0
   Suffix: 0

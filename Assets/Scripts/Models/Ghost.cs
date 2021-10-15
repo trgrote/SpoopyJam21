@@ -7,6 +7,6 @@ namespace Models
     public class Ghost : ScriptableObject
     {
         public string Name;
-        public List<Package> Packages;
+        public Dictionary<Attribute, int> AttributeScores;
     }
 }
