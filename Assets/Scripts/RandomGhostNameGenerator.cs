@@ -12,30 +12,30 @@ public class RandomGhostNameGenerator : MonoBehaviour
 
     public Repository.GhostNameRepository _ghostNames;
 
-    public string GenerateRandomName()
-    {
-        var prefix = Random.value <= _prefixChance ? 
-            _ghostNames.Names.Where(n => n.Prefix).OrderBy(n => Random.value).Select(n => n.Name).FirstOrDefault() :
-            "";
-       
-        var first = Random.value <= _firstNameChance ? 
-            _ghostNames.Names.Where(n => n.FirstName).OrderBy(n => Random.value).Select(n => n.Name).FirstOrDefault() :
-            "";
-            
-        var last = Random.value <= _lastNameChance ? 
-            _ghostNames.Names.Where(n => n.LastName).OrderBy(n => Random.value).Select(n => n.Name).FirstOrDefault() :
-            "";
-
-        var suffix = Random.value <= _sufffixChance ? 
-            _ghostNames.Names.Where(n => n.Suffix).OrderBy(n => Random.value).Select(n => n.Name).FirstOrDefault() :
-            "";
-
-        return string.Join(" ", new string[]{prefix, first, last, suffix}.Where(n => n.Length > 0));
-    }
+    public Repository.PackageRepository _packages;
 
     [NaughtyAttributes.Button]
     public void TestRandomName()
     {
-        Debug.Log(GenerateRandomName());
+        Debug.Log(RandomGhostGenerators.GenerateRandomName(
+            _ghostNames.Names,
+            _prefixChance,
+            _firstNameChance,
+            _lastNameChance,
+            _sufffixChance
+        ));
+    }
+
+    [NaughtyAttributes.Button]
+    public void MakeRandomGhost()
+    {
+        Debug.Log(RandomGhostGenerators.NewGhost(
+            _packages.Packages,
+            _ghostNames.Names,
+            _prefixChance,
+            _firstNameChance,
+            _lastNameChance,
+            _sufffixChance
+        ).Name);
     }
 }
