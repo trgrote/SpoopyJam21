@@ -38,4 +38,27 @@ public class RandomGhostNameGenerator : MonoBehaviour
             _sufffixChance
         ).Name);
     }
+
+    [SerializeField] private GhostRuntimeSet _ghosts;
+
+    [NaughtyAttributes.Button]
+    public void MakeRandomGhostAndPutIntoList()
+    {
+        var ghost = RandomGhostGenerators.NewGhost(
+            _packages.Packages,
+            _ghostNames.Names,
+            _prefixChance,
+            _firstNameChance,
+            _lastNameChance,
+            _sufffixChance
+        );
+
+        _ghosts.Add(ghost);
+    }
+
+    [NaughtyAttributes.Button]
+    public void ClearGhostSet()
+    {
+        _ghosts.Clear();
+    }
 }
