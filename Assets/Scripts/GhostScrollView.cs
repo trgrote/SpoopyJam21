@@ -32,9 +32,10 @@ public class GhostScrollView : MonoBehaviour
         }
 
         // Repopulate with current list
-        foreach (var ghost in ghosts)
+        foreach (var ghost in ghosts.Where(g => g))
         {
-            Instantiate(_itemPrefab, transform);
+            var item = Instantiate(_itemPrefab, transform);
+            item.GetComponent<GhostItemRenderer>()?.SetGhost(ghost);
         }
     }
 }

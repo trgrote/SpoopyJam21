@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// This is just a shitty little test script
 public class RandomGhostNameGenerator : MonoBehaviour
 {
     private float _prefixChance = 0.1f;
@@ -58,6 +59,11 @@ public class RandomGhostNameGenerator : MonoBehaviour
 
     [NaughtyAttributes.Button]
     public void ClearGhostSet()
+    {
+        _ghosts.Clear();
+    }
+
+    void OnDisable()
     {
         _ghosts.Clear();
     }
