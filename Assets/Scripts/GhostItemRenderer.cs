@@ -5,16 +5,20 @@ using UnityEngine.UI;
 
 public class GhostItemRenderer : MonoBehaviour
 {
-    [SerializeField] private Models.Ghost _ghost;
+    private Models.Ghost _ghost;
+    [SerializeField] private Text _text;
+
+    [SerializeField] private ExtGhostRef _highlightedGhost;
 
     public void SetGhost(Models.Ghost ghost)
     {
         _ghost = ghost;
 
-        var text = GetComponent<Text>();
-        if (_ghost)
-        {
-            text.text = _ghost.Name;
-        }
+        _text.text = _ghost.Name;
+    }
+
+    public void SetAsHighlightedGhost()
+    {
+        _highlightedGhost.Value = _ghost;
     }
 }

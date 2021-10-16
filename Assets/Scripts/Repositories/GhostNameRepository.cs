@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Repository
 {
-    [CreateAssetMenu(fileName = "NewGhostNameRepository", menuName = "Repositories/New GhostName Repository")]
+    [CreateAssetMenu(fileName = "NewGhostNameRepository", menuName = "Spoopy/Repositories/New GhostName Repository")]
     public class GhostNameRepository : ScriptableObject
     {
         public List<GhostName> Names;
