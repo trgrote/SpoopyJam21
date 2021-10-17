@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,15 @@ public class GhostInfoRenderer : MonoBehaviour
 
     void UpdateText(rho.ExternalVariable<Models.Ghost> ghost, Models.Ghost oldGhost, Models.Ghost newGhost)
     {        
-        _text.text = newGhost.Name;
+        var text = newGhost.Name;
+
+        text += "\n\nStats:\n";
+
+        text += newGhost.AttributeScores.Aggregate("", (result, pair) => {
+            result += $"- {pair.Key.name} : {pair.Value}\n";
+            return result;
+        });
+
+        _text.text = text;
     }
 }

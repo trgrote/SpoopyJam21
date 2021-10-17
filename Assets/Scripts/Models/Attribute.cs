@@ -7,6 +7,5 @@ namespace Models
     [CreateAssetMenu(fileName = "NewAttribute", menuName = "Models/New Attribute")]
     public class Attribute : ScriptableObject
     {
-        public string Name;
     }
 }

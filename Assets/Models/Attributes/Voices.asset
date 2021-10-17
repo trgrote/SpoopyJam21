@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f55d173a985c96e4fb658a9fcf8fb404, type: 3}
-  m_Name: AllPackages
+  m_Script: {fileID: 11500000, guid: a1eea5e68f86c154999d02057f79222d, type: 3}
+  m_Name: Voices
   m_EditorClassIdentifier: 
-  Packages:
-  - {fileID: 11400000, guid: a356197ff822d7a46b75fc080632b8e0, type: 2}
-  - {fileID: 11400000, guid: 6e12fc09cf030c7489fbd574be6a9c23, type: 2}
+  Name: Voices
