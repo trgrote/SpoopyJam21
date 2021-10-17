@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ghost Info
+  m_Text: Mission Info
 --- !u!1 &1299873542385660528
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.0849, y: 3.085}
-  m_SizeDelta: {x: -33.9339, y: -37.0188}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -30.000004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1299873543878526096
 CanvasRenderer:
@@ -1128,6 +1128,7 @@ GameObject:
   - component: {fileID: 7816501715538825914}
   - component: {fileID: 5191832584629551176}
   - component: {fileID: 5667852471720977190}
+  - component: {fileID: 3159391248923474634}
   m_Layer: 5
   m_Name: MissionInfo
   m_TagString: Untagged
@@ -1193,6 +1194,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3159391248923474634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581158717321045231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa70a11c75033a54d9f28ffb6073a3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 6735623054335633713}
+  _missionGhosts: {fileID: 11400000, guid: f60efdbc08f7ce546917a3cd473ac384, type: 2}
 --- !u!1001 &1299873542259415067
 PrefabInstance:
   m_ObjectHideFlags: 0
