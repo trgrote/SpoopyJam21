@@ -9,6 +9,7 @@ public class GhostItemRenderer : MonoBehaviour
     [SerializeField] private Text _text;
 
     [SerializeField] private ExtGhostRef _highlightedGhost;
+    [SerializeField] private GhostRuntimeSet _missionGhosts;
 
     public void SetGhost(Models.Ghost ghost)
     {
@@ -20,5 +21,17 @@ public class GhostItemRenderer : MonoBehaviour
     public void SetAsHighlightedGhost()
     {
         _highlightedGhost.Value = _ghost;
+    }
+
+    public void OnGhostSelected(bool on)
+    {
+        if (on)
+        {
+            _missionGhosts.Add(_ghost);
+        }
+        else
+        {
+            _missionGhosts.Remove(_ghost);
+        }
     }
 }
