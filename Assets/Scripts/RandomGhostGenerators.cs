@@ -34,9 +34,11 @@ public static class RandomGhostGenerators
 
         var ghost = ScriptableObject.CreateInstance<Ghost>();
         ghost.Name = name + " the " + package.Name;
-        ghost.AttributeScores = package.Attributes.Aggregate(
-            new Dictionary<Attribute, int>(), (result, attribute) => {
-                result[attribute] = result.ContainsKey(attribute) ? result[attribute] + 1 : 1;
+        ghost.AttributeScores = package.AttributeScores.Aggregate(
+            new Dictionary<Attribute, int>(), (result, attributeScorePair) => {
+                result[attributeScorePair.Attribute] = result.ContainsKey(attributeScorePair.Attribute) ? 
+                    result[attributeScorePair.Attribute] + attributeScorePair.Score : 
+                    attributeScorePair.Score;
                 return result;
             }
         );

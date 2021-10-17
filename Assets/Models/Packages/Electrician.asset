@@ -15,3 +15,6 @@ MonoBehaviour:
   Name: Electrician
   Attributes:
   - {fileID: 11400000, guid: 6d44c268e00372d4cacc5ea09793599a, type: 2}
+  AttributeScores:
+  - Attribute: {fileID: 11400000, guid: 6d44c268e00372d4cacc5ea09793599a, type: 2}
+    Score: 2
