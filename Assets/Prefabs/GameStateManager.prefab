@@ -46,3 +46,4 @@ MonoBehaviour:
   _ghosts: {fileID: 11400000, guid: c3bc8d62824f41344bf7beb4772e74c2, type: 2}
   _startNumGhosts: 4
   _generator: {fileID: 11400000, guid: 91d93060c85571d40b598fd6c6fdfc07, type: 2}
+  _missionGhosts: {fileID: 11400000, guid: f60efdbc08f7ce546917a3cd473ac384, type: 2}

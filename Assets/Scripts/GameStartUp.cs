@@ -7,6 +7,7 @@ public class GameStartUp : MonoBehaviour
     [SerializeField] GhostRuntimeSet _ghosts;
     [SerializeField] int _startNumGhosts = 4;
     [SerializeField] Models.GhostGeneratorConfig _generator;
+    [SerializeField] private GhostRuntimeSet _missionGhosts;
 
     // Start is called before the first frame update
     void Start()
@@ -15,5 +16,7 @@ public class GameStartUp : MonoBehaviour
         {
             _ghosts.Add(_generator.NewGhost());
         }
+
+        _missionGhosts.Clear();
     }
 }
